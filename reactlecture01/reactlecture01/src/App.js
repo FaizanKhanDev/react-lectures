@@ -1,24 +1,31 @@
-import logo from './logo.svg';
 import './App.css';
-
+import Card from './Card';
 function App() {
+  let payload = {
+    cardTitle: "Card Title",
+    cardTitleTwo: "Card Title Two",
+    cardTitleThree: "Card Title Three",
+  }
+  let myArrray = [
+    "Card Title",
+    "Card Title Two",
+    "Card Title Three",
+  ];
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Card 
+        value={payload.cardTitle} 
+        title={myArrray[0]}
+       />
+      <Card 
+           value={payload.cardTitleTwo} 
+           title={myArrray[1]}
+            />
+      <Card 
+          value={payload.cardTitleThree} 
+          title={myArrray[3]} />
+    </>
   );
 }
 
